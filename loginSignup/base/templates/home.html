@@ -1,4 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-home page
+    <p>home page</p>
+    <form action="{% url 'base:logout' %}" method="POST">
+        {% csrf_token %}
+        <button type="Submit">Logout</button>
+    </form>
 {% endblock content %}
