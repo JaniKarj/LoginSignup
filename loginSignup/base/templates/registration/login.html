@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<form method="POST">
-    {% csrf_token %}
-    {{form}}
-    <button type="Submit">Submit</button>
-</form>
+<div class="shadow-wrap">
+    <div class="form-wrap">
+        <h3>Kirjautuminen</h3>
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button type="Submit">Kirjaudu sisään</button>
+        </form>
+        <a class="signup-link" href="{% url "base:authView" %}">Rekisteröidy</a>
+    </div>
+</div>
 {% endblock content %}
