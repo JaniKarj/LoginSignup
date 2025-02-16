@@ -4,5 +4,5 @@ from .views import authView, home
 urlpatterns = [
     path("", home, name="home"),
     path("signup/", authView, name="authView"),
-    path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/", include("django.contrib.auth.urls")), #Sisältää login ja logout
 ]
